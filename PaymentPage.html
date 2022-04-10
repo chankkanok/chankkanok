@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK & GERMAN T-SHIRT STORE</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    
+
+
+    <form
+      id="payment-form"
+      method="POST"
+      action="https://merchant.com/charge-card"
+    >
+      <div class="Request-Data">
+        <img src="/image/T_Brand.png" alt=""width="30" height="30">
+        <label for="Amount">Amount:</label>
+        <input type="text" id="Amount" name="Amount" oninput="onchangedata()"><br><br>
+     </div>
+      <div class="Res-Data">
+         <label for="RespToken" hidden>DATA</label> 
+        <input type="text" id="TokenData" name="TokenData" hidden><br><br>
+      </div>
+
+      <div class="one-liner">
+        <div class="card-frame"></div>
+                   
+        <button id="pay-button" disabled>
+          SUBMIT
+        </button>
+      </div>
+      <p class="error-message"></p>
+      <br><br>
+       <div class="success-payment-message" >
+
+      </div>
+      <br><br>
+      <input type="button" onclick = "RequestPayment()" value = "Request Payment"hidden><br><br>
+      </button>
+    
+
+    </form>
+
+    <script src="https://cdn.checkout.com/js/framesv2.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Payment.js"></script>>
+   </body>
+</html>
